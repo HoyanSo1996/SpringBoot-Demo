@@ -1,5 +1,8 @@
 package com.omega.springboot;
 
+import com.omega.springboot.entity.Monster;
+import com.omega.springboot.entity.Monster2;
+import com.omega.springboot.entity.Monster3;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -25,6 +28,13 @@ public class MainApp {
         //     System.out.println(beanDefinitionName);
         // }
 
-        System.out.println("IOC 容器中是否存在 dog : " + ioc.containsBean("dog"));
+        // System.out.println("IOC 容器中是否存在 dog : " + ioc.containsBean("dog"));
+
+        Monster monster = ioc.getBean( Monster.class);
+        Monster2 monster2 = ioc.getBean(Monster2.class);
+        Monster3 monster3 = ioc.getBean( Monster3.class);
+        System.out.println(monster);
+        System.out.println(monster2);
+        System.out.println(monster3);
     }
 }

@@ -2,7 +2,9 @@ package com.omega.springboot.config;
 
 import com.omega.springboot.entity.Cat;
 import com.omega.springboot.entity.Dog;
+import com.omega.springboot.entity.Monster3;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -13,6 +15,7 @@ import org.springframework.context.annotation.Configuration;
  * @date 2024/9/27
  */
 @Configuration
+@EnableConfigurationProperties(Monster3.class)
 public class BeanConfig {
 
     /**
