@@ -15,11 +15,31 @@
         <version>2.5.3</version>
     </parent>
 
+    <!-- 修改默认的依赖版本号 -->
+    <!-- 方式一: 在 properties 标签里进行指定, key 按照父依赖中的 <version>${mysql.version}</version> 写 -->
+    <!--<properties>
+        <mysql.version>5.1.49</mysql.version>
+    </properties>-->
+
     <!-- 导入 web 项目场景启动器, 会自动导入和 web 开发相关依赖 -->
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+
+        <!-- 直接导入依赖, 默认版本号是 8.0.26 -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+
+        <!-- 修改默认的依赖版本号  -->
+        <!-- 方式二: 直接在依赖里指定新的版本号 -->
+        <!--<dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.49</version>
+        </dependency>-->
     </dependencies>
 </project>
