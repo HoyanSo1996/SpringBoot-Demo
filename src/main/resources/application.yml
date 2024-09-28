@@ -31,3 +31,17 @@ student:
     group2:
       - {name: byd, price: 90000.00}
       - {name: xiaomi, price: 200000.00}
+
+spring:
+  mvc:
+    # 修改静态资源的访问路径前缀
+    static-path-pattern: /prefix/**
+  web:
+    resources:
+      # 修改静态资源的默认放置文件夹
+      static-locations:
+        - classpath:/META-INF/resources/
+        - classpath:/resources/
+        - classpath:/static/
+        - classpath:/public/
+        - classpath:/custom/
