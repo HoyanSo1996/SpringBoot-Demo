@@ -1,0 +1,33 @@
+student:
+  id: 100
+  name: Zhang San
+  age: 25
+  is-married: false
+  birth: 1999/08/08
+  # 行内写法
+  skills: [打篮球, rap]
+  # 换行写法
+  hobbies:
+    - 喝酒
+    - 吃肉
+  salaries:
+    - 14000.00
+    - 18500.00
+  # 行内写法
+  # car: {name: bwm, price: 210000.00}
+  # 换行写法
+  car:
+    name: bwm
+    price: 210000.00
+  houses:
+    house1: 珠江帝景
+    house2: 珠江花园
+  cars:
+    group1:
+      - name: benz
+        price: 480000.00
+      - name: audi
+        price: 380000.00
+    group2:
+      - {name: byd, price: 90000.00}
+      - {name: xiaomi, price: 200000.00}
