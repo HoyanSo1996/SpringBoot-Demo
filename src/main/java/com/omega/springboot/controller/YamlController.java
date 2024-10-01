@@ -13,7 +13,7 @@ import javax.annotation.Resource;
  * @date 2024/9/28
  */
 @RestController
-@RequestMapping("yaml")
+@RequestMapping("/yaml")
 public class YamlController {
 
     @Resource
