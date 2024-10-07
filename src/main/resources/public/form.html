@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Monster HTML</title>
+</head>
+<body>
+<h1>表单 — GET</h1>
+<form action="/SpringBoot-Demo/monster/query" method="get">
+    <input type="text" value="表单一">
+    <input type="submit" value="submit">
+</form>
+
+<h1>表单 — POST</h1>
+<form action="/SpringBoot-Demo/monster/add" method="post">
+    <input type="text" value="表单二">
+    <input type="submit" value="submit">
+</form>
+
+<h1>表单 — PUT</h1>
+<form action="/SpringBoot-Demo/monster/modify" method="post">
+    <input type="hidden" name="_method" value="put">
+    <input type="text" value="表单三">
+    <input type="submit" value="submit">
+</form>
+
+<h1>表单 — DELETE</h1>
+<form action="/SpringBoot-Demo/monster/delete" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <input type="text" value="表单四">
+    <input type="submit" value="submit">
+</form>
+</body>
+</html>

@@ -36,6 +36,10 @@ spring:
   mvc:
     # 修改静态资源的访问路径前缀
     static-path-pattern: /prefix/**
+    # 开启表单的 RESTFUL 功能
+    hiddenmethod:
+      filter:
+        enabled: true
   web:
     resources:
       # 修改静态资源的默认放置文件夹
