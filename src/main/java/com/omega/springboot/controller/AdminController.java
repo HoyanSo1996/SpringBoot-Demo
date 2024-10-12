@@ -42,21 +42,32 @@ public class AdminController {
     public String mainPage(Model model, HttpSession session) {
         log.info("进入 mainPage...");
 
-        if (session.getAttribute("admin") != null) {
-            // 验证用户是否有登录过
-            ArrayList<User> userList = new ArrayList<>();
-            userList.add(new User(1, "关羽~", 20, "gy@sohu.com",  "666666"));
-            userList.add(new User(2, "张飞", 30, "zf@sohu.com",  "666666"));
-            userList.add(new User(3, "赵云", 22, "zy@sohu.com", "666666"));
-            userList.add(new User(4, "马超", 28, "mc@sohu.com", "666666"));
-            userList.add(new User(5, "黄忠", 50, "hz@sohu.com", "666666"));
-            model.addAttribute("userList", userList);
-            // 利用 Thymeleaf 的视图解析器, 请求转发到真正要去的页面 /templates/manage.html
-            return "manage";
-        } else {
-            // 返回登录页, 并给出提示
-            model.addAttribute("msg", "您尚未登录/请登录");
-            return "admin_login";
-        }
+        // if (session.getAttribute("admin") != null) {
+        //     // 验证用户是否有登录过
+        //     ArrayList<User> userList = new ArrayList<>();
+        //     userList.add(new User(1, "关羽~", 20, "gy@sohu.com",  "666666"));
+        //     userList.add(new User(2, "张飞", 30, "zf@sohu.com",  "666666"));
+        //     userList.add(new User(3, "赵云", 22, "zy@sohu.com", "666666"));
+        //     userList.add(new User(4, "马超", 28, "mc@sohu.com", "666666"));
+        //     userList.add(new User(5, "黄忠", 50, "hz@sohu.com", "666666"));
+        //     model.addAttribute("userList", userList);
+        //     // 利用 Thymeleaf 的视图解析器, 请求转发到真正要去的页面 /templates/manage.html
+        //     return "manage";
+        // } else {
+        //     // 返回登录页, 并给出提示
+        //     model.addAttribute("msg", "您尚未登录/请登录");
+        //     return "admin_login";
+        // }
+
+        // 配置拦截器对登录用户进行验证
+        ArrayList<User> userList = new ArrayList<>();
+        userList.add(new User(1, "关羽~", 20, "gy@sohu.com", "666666"));
+        userList.add(new User(2, "张飞", 30, "zf@sohu.com", "666666"));
+        userList.add(new User(3, "赵云", 22, "zy@sohu.com", "666666"));
+        userList.add(new User(4, "马超", 28, "mc@sohu.com", "666666"));
+        userList.add(new User(5, "黄忠", 50, "hz@sohu.com", "666666"));
+        model.addAttribute("userList", userList);
+        // 利用 Thymeleaf 的视图解析器, 请求转发到真正要去的页面 /templates/manage.html
+        return "manage";
     }
 }
