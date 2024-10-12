@@ -53,3 +53,9 @@ spring:
         - classpath:/static/
         - classpath:/public/
         - classpath:/custom/
+  servlet:
+    multipart:
+      # 单个文件最大的Size
+      max-file-size: 10MB
+      # 单次上传总文件的Size
+      max-request-size: 100MB
