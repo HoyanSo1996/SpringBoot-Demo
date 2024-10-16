@@ -32,4 +32,15 @@ public class ErrorController {
         int i = 10 / 0;
         return "redirect:/manage.html";
     }
+
+    /**
+     * 模拟自定义异常
+     */
+    @RequestMapping("/err3")
+    public String err3(@RequestParam String username) {
+        if (!"tom".equals(username)) {
+            throw new AccessException();
+        }
+        return "redirect:/manage.html";
+    }
 }
