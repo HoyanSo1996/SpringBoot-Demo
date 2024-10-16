@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+</head>
+<body bgcolor="#CED3FE">
+<div style="text-align: center">
+    <h1>5xx 服务器内部其他异常</h1>
+    <a href="#" th:href="@{/}">返回主页面</a><br/>
+    <p>状态码：[[${status}]]</p>
+    <p>错误信息：[[${error}]]</p>
+    <p>时   间：[[${timestamp}]]</p>
+</div>
+</body>
+</html>
