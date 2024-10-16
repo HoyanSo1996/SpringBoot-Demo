@@ -17,7 +17,7 @@ import org.springframework.context.annotation.ComponentScan;
  * @author KennySo
  * @date 2024/9/27
  */
-@ServletComponentScan("com.omega")
+// @ServletComponentScan("com.omega")
 @ComponentScan(value = "com.omega")
 @SpringBootApplication
 public class MainApp {

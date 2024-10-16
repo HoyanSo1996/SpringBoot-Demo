@@ -13,7 +13,7 @@ import java.io.IOException;
  * @author KennySo
  * @date 2024/10/16
  */
-@WebServlet({"/servlet01", "/servlet02"})
+// @WebServlet({"/servlet01", "/servlet02"})
 public class Servlet_ extends HttpServlet {
 
     /**

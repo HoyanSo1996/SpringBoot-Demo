@@ -11,7 +11,7 @@ import java.io.IOException;
  * @date 2024/10/16
  */
 
-@WebFilter({"/css/*", "/image/**"})
+// @WebFilter({"/css/*", "/image/**"})
 public class Filter_ implements Filter {
 
     @Override

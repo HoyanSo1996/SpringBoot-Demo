@@ -10,7 +10,7 @@ import javax.servlet.annotation.WebListener;
  * @author KennySo
  * @date 2024/10/16
  */
-@WebListener
+// @WebListener
 public class Listener_ implements ServletContextListener {
 
     @Override
