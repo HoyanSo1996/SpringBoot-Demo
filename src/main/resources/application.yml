@@ -59,3 +59,28 @@ spring:
       max-file-size: 10MB
       # 单次上传总文件的Size
       max-request-size: 100MB
+
+# 配置Tomcat
+server:
+  # 配置端口号
+  port: 8090
+  servlet:
+    # 配置项目路径
+    context-path: /SpringBoot-Demo
+    # session 超时时间
+    session:
+      timeout: 30m
+  tomcat:
+    # 最大连接数 (服务器与客户端/浏览器的socket连接数, 线程可以一次处理一个请求(BIO), 也可以处理多个请求(NIO), 所以连接数大于等于工作线程数)
+    # 最大连接数 也可以基于 等待队列 来接收多余连接
+    max-connections: 8192
+    # 最大连接时间
+    connection-timeout: 10000
+    threads:
+      # 最大工作线程数
+      max: 200
+      # 最小工作线程数
+      min-spare: 10
+    # 等待队列的长度, 当前服务器的最大工作线程数用完后, 新的 HTTP 请求会进入到等待队列中进行等待
+    # 当等待队列满后, tomcat 会拒绝后面发过来的 HTTP 请求, 返回 connection confused.
+    accept-count: 100
